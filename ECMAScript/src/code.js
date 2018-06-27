@@ -8,7 +8,7 @@ for(index in data){
     $("#myTable").append("<tr><td>"+data[index].location+"<td>"+data[index].home_team_country+"</td><td>"+data[index].away_team_country+"</td><td>"+data[index].home_team.goals+"  -  "+data[index].away_team.goals +"</td</tr>")
     }
   } 
-  }).catch(err => {console.log(err)
+  }).catch(err => {console.log("the Error is "+err)
   });
  
 
