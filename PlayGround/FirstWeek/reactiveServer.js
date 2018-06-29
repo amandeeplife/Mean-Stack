@@ -9,10 +9,6 @@ const queryString = require('querystring')
 server.on('request',(req,res)=>{
  
     const myUrl =queryString.stringify(url.parse(req.url)).split("%2F")
-    
-   
-   
-
     if ( myUrl.pop()== 'file.txt') {
         res.setHeader('content-type', 'text/html');
 
