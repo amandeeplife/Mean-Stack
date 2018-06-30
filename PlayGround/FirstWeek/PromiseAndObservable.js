@@ -20,9 +20,9 @@ function checkSystem(){
  
 checkSystem().then(e=>console.log(e)).catch(err=>console(err))
 
-//2 Using Observable
-// var myPromise  = checkSystem();
-// var myObservable = from(myPromise);
-// myObservable.subscribe(e=>console.log(e))
+ 
+var myPromise  = checkSystem();
+var myObservable = from(myPromise);
+myObservable.subscribe(e=>console.log(e))
 
 console.log("checking Your system . . .")
