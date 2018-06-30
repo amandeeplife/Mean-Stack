@@ -13,6 +13,10 @@ const NinjaSchema  = new schema({
     },
     available: {
         type:boolean,
-        default:false;
+        default:false
     }
-})
+});
+
+const Ninja = mongoose.model("ninja",NinjaSchema);
+
+module.exports = Ninja
