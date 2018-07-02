@@ -19,9 +19,6 @@ server.on('request',(req,res)=>{
         childProcess.on('message',(data)=>{
             res.end(data)
         })
-
-
      }
-
   
 }).listen(8085) 

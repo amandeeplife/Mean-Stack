@@ -16,8 +16,7 @@ router.get('/:name',function(req,res){
 })
 
 router.post('/',function(req,res){
-    console.log("pos")
-    req.assert('name','Person name can not be empty').notEmpty();
+         req.assert('name','Person name can not be empty').notEmpty();
         var errors = req.validationErrors();
         if(errors) res.send({errors:errors})
         else {
