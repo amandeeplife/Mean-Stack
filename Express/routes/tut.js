@@ -1,4 +1,5 @@
 const express = require('express')
+const Ninja = require('../models/ninja')
 const router  = express.Router();
 
 router.get('/ninjas',function(req,res){
@@ -6,8 +7,9 @@ router.get('/ninjas',function(req,res){
 })
 
 router.post('/ninjas',function(req,res){
-  console.log()
-   res.send(req.body)
+ Ninja.create(req.body).then(function(data){
+     res.send("Data Saved Successfully!")
+ })
 })
 
 router.put('/ninjas/:id',function(req,res){

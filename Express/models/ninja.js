@@ -12,7 +12,7 @@ const NinjaSchema  = new schema({
         type: String,
     },
     available: {
-        type:boolean,
+        type:Boolean,
         default:false
     }
 });
