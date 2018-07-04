@@ -1,5 +1,5 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/mydb2";
+var url = "mongodb://localhost:27017/dbLab";
 var crypto= require('crypto');
 var express=require('express');
 var app=express();
@@ -8,8 +8,8 @@ var myresult
 
 MongoClient.connect(url, function(err, db) {
   if (err) throw err;
-  var dbo = db.db("mydb2");
-  dbo.collection("testraw").findOne({}, function(err, result) {
+  var dbo = db.db("dbLab");
+  dbo.collection("myCol").findOne({}, function(err, result) {
     if (err) throw err;
     myresult=result.message;
     db.close();
