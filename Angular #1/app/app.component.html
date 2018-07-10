@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+ 
+<input  (input)="getInput($event.target.value) " >
+<span>parent message  {{parentMessage}}</span>
+ <br><br>
+<app-counter [toChild]="message" (messageEmitter) = recieveMessage($event)></app-counter>
+Component Counter value  = {{bindValue}}
+

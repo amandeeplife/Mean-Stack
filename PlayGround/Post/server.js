@@ -12,6 +12,7 @@ function onRequest(request, response) {
         request.setEncoding("utf8");
         request.on("data", function (postDataChunk) {
             postData += postDataChunk;
+            console.log(postDataChunk)
         });
         request.on("end", function () {
             myTextAreaValue = querystring.parse(postData).text;
